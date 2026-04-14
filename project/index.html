@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RamadhanHub</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<canvas id="stars"></canvas>
+<div class="clouds"></div>
+<div class="glow-bg">
+    <span></span>
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="nav-left">
+    <a href="#" class="nav-item" data-target="dashboard">Dashboard</a>
+    <a href="#" class="nav-item" data-target="jadwal">Jadwal</a>
+</div>
+
+<div class="nav-center">
+    <h1>🌙 RamadhanHub</h1>
+</div>
+
+<div class="nav-right">
+    <a href="#" class="nav-item" data-target="tracker">Tracker</a>
+    <a href="#" class="nav-item" data-target="quest">Quest</a>
+    <a href="#" class="nav-item" data-target="profil">Profil</a>
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+<!-- HEADER -->
+<header class="header">
+    <h1>🌙 RamadhanHub</h1>
+    <p>Track your worship, improve your Ramadan</p>
+</header>
+
+<div class="hero-logo">
+    <img src="logo.png" alt="RamadhanHub Logo">
+</div>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="section active">
+    <h2>📊 Dashboard</h2>
+    <div class="dashboard-grid">
+        <div class="box">
+            <h3>Hari Ramadhan</h3>
+            <p id="day-count">10</p>
+        </div>
+
+        <div class="box">
+            <h3>Countdown Idul Fitri</h3>
+            <p id="countdown">20 Hari</p>
+        </div>
+
+        <div class="box">
+            <h3>Total Ibadah</h3>
+            <p id="total-ibadah">0</p>
+        </div>
+    </div>
+</section>
+
+<!-- JADWAL SHOLAT -->
+<section id="jadwal" class="section">
+    <h2>🕌 Jadwal Sholat</h2>
+    <div class="jadwal-grid">
+        <div>Subuh: <span id="subuh">04:30</span></div>
+        <div>Dzuhur: <span id="dzuhur">12:00</span></div>
+        <div>Ashar: <span id="ashar">15:15</span></div>
+        <div>Maghrib: <span id="maghrib">18:05</span></div>
+        <div>Isya: <span id="isya">19:20</span></div>
+    </div>
+    <button id="update-jadwal">Update Jadwal</button>
+</section>
+
+<!-- TRACKER IBADAH -->
+<section id="tracker" class="section">
+    <h2>✅ Tracker Ibadah</h2>
+
+    <div class="checklist">
+        <label><input type="checkbox" class="task" value="puasa"> Puasa</label>
+        <label><input type="checkbox" class="task" value="sholat"> Sholat Tepat Waktu</label>
+        <label><input type="checkbox" class="task" value="quran"> Tilawah Qur'an</label>
+        <label><input type="checkbox" class="task" value="sedekah"> Sedekah</label>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <p id="progress-text">0% selesai</p>
+</section>
+
+<!-- QUEST -->
+<section id="quest" class="section">
+    <h2>🎯 Ramadhan Quest</h2>
+    <p id="quest-text">Berikan makanan berbuka kepada orang lain</p>
+    <button id="complete-quest">Selesaikan Quest</button>
+</section>
+
+<!-- ARTIKEL -->
+<section id="artikel" class="section">
+    <h2>📖 Edukasi</h2>
+    <div class="artikel">
+        <h3>Keutamaan 10 Malam Terakhir</h3>
+        <p>Pelajari keutamaan Laylatul Qadr dan amalan terbaik...</p>
+        <button id="read-more">Baca Selengkapnya</button>
+    </div>
+</section>
+
+<!-- KOMUNITAS -->
+<section id="Komunitas" class="section">
+    <h2>💬 Komunitas</h2>
+
+    <textarea id="post-input" placeholder="Tulis sesuatu..."></textarea>
+    <button id="post-btn">Kirim</button>
+
+    <div id="post-list">
+        <!-- Post akan muncul di sini -->
+    </div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil" class="section">
+    <h2>👤 Profil</h2>
+    <p>Nama: <span id="user-name">Guest</span></p>
+    <p>Total Hari Aktif: <span id="active-days">0</span></p>
+    <p>Badge: <span id="badge">Pemula</span></p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>Made with ❤️ for Ramadan</p>
+</footer>
+```
+
+</div>
+
+<!-- JS (ini buat file bckend yak) -->
+
+<script src="backend.js"></script>
+
+</body>
+</html>
